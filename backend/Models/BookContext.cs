@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using BookAPI.Models;
+using BookAPI.Controllers;
 
 public class BookContext : DbContext
 {

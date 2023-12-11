@@ -1,11 +1,13 @@
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using BookAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<BookContext>(opt =>
-   opt.UseInMemoryDatabase("BookList"));
+builder.Services.AddDbContext<BookContext>(options =>
+    options.UseNpgsql("Host=localhost;Port=5432;Database=booklist;User Id=books_admin;Password=adminbooks")); 
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

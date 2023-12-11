@@ -4,7 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using BookApi.Models;
+using BookAPI.Models;
+using BookAPI.Controllers;
 
 public class Startup
 {
