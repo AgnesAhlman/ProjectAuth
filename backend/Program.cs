@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using BookAPI.Models;
+using RecipeAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<BookContext>(options =>
-    options.UseNpgsql("Host=localhost;Port=5432;Database=booklist;User Id=books_admin;Password=adminbooks")); 
+// builder.Services.AddDbContext<BookContext>(options =>
+//     options.UseNpgsql("Host=localhost;Port=5432;Database=booklist;User Id=books_admin;Password=adminbooks")); 
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
