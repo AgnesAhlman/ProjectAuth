@@ -6,8 +6,8 @@ using RecipeAPI.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-// builder.Services.AddDbContext<BookContext>(options =>
-//     options.UseNpgsql("Host=localhost;Port=5432;Database=booklist;User Id=books_admin;Password=adminbooks")); 
+ builder.Services.AddDbContext<RecipeContext>(options =>
+   options.UseNpgsql("Host=localhost;Port=5432;Database=what-to-eat;User Id=agnesahlman;Password=fredricson")); 
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -20,7 +20,7 @@ public class Startup
   {
     // Configure other services
 
-    services.AddDbContext<BookContext>(options =>
+    services.AddDbContext<RecipeContext>(options =>
         options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
   }
 
